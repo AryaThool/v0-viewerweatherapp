@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark transition-all" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <div className="min-h-screen bg-gradient-to-b from-blue-50 to-blue-100 dark:from-gray-900 dark:to-gray-800">
@@ -26,6 +26,11 @@ export default function RootLayout({
           </div>
         </ThemeProvider>
       </body>
+
+      {/* 
+        If you need to run client-side theme logic, move it to a useEffect in a component,
+        or use the <Script> component from 'next/script' for inline scripts.
+      */}
     </html>
   )
 }

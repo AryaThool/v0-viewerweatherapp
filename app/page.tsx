@@ -8,6 +8,7 @@ import { Forecast } from "./components/forecast"
 import { HourlyForecast } from "./components/hourly-forecast"
 import { ErrorMessage } from "./components/error-message"
 import { InitialState } from "./components/initial-state"
+import ThemeToggle from "./components/ThemeToggle"
 
 export default function Home() {
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null)
@@ -59,7 +60,10 @@ export default function Home() {
             <InitialState />
           )}
         </div>
+        <ThemeToggle/>
       </div>
+
+     
     </main>
   )
 }
